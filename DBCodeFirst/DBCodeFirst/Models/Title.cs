@@ -9,6 +9,7 @@ namespace DBCodeFirst.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TitleId { get; set; }
 
+        [MaxLength(50)]
         public string Name { get; set; }
 
         public List<Employee> Employees { get; set; } = new List<Employee>();

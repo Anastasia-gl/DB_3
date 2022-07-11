@@ -8,8 +8,8 @@ namespace ConsoleEFCore
         {
             using (ApplicationContext context = new ApplicationContextFactory().CreateDbContext(Array.Empty<string>()))
             {
-                context.Database.EnsureCreated();
-                context.SaveChanges();             
+             //   context.Database.EnsureCreated();
+              //  context.SaveChanges();             
             }
         }
     }

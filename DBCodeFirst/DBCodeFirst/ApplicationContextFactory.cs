@@ -7,9 +7,10 @@ namespace DBCodeFirst
     {
         public ApplicationContext CreateDbContext(string[] args)
         {
-            var dir = File.ReadAllText("link.json");
-            var connectionString = JsonConvert.DeserializeObject(dir);
-            var result = Convert.ToString(connectionString);
+            //  var dir = File.ReadAllText("link.json");
+            //  var connectionString = JsonConvert.DeserializeObject(dir);
+            //  var result = Convert.ToString(connectionString);
+            var result = @"Data Source = DESKTOP-EP3R97J;Initial Catalog = App;Integrated Security = True";
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
             var options = optionsBuilder
                 .UseSqlServer(result)
